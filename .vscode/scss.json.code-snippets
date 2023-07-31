@@ -1,0 +1,43 @@
+{
+  "width template": {
+    "prefix": "@w",
+    "body": ["width: calcWidth($1);"],
+    "description": "宽度自动生成"
+  },
+  "height template": {
+    "prefix": "@h",
+    "body": ["height: calcHeight($1);"],
+    "description": "高度自动生成"
+  },
+  "calcWidth template": {
+    "prefix": "@c",
+    "body": ["calcWidth($1)"],
+    "description": "高度自动生成"
+  },
+  "boldFontStyle template": {
+    "prefix": "@b",
+    "body": ["@include baseFontStyle($fontSize,$lineHeight,$fontWeight,$color);"],
+    "description": "字体样式"
+  },
+  "React TSX Component": {
+    "prefix": "react tsx",
+    "body": [
+      "import React, { FC } from 'react'",
+      "",
+      "import styles from './index.module.scss'",
+      "",
+      "interface Props {}",
+      "",
+      "const ComponentName: FC<Props> = () => {",
+      "  return (",
+      "    <div className={styles.main}>",
+      "      $1",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+      "export default ComponentName"
+    ],
+    "description": "React TSX component template"
+  }
+}
